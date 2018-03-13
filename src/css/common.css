@@ -1,0 +1,289 @@
+p, span, strong, i, small, em, blockquote{
+    color: #607d8b;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+p{
+    max-width: 100%!important;
+}
+
+.ui-title{
+    font-family: 'Quicksand', sans-serif;
+    color: #688696 !important;
+    margin: 1rem 0;
+}
+
+.ui-separator{
+    width: 100%;
+    height: 20px;
+}
+.text-half-w{
+    color: #e5e5e5 !important;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+.text-mayan{
+    color: #c000ff !important;;
+}
+.text-rose{
+    color: #ff7f00 !important;;
+}
+.kit-info-color{
+    color: #4285f4;
+}
+.kit-info-backcolor{
+    background: #4285f4!important;
+}
+.dark-shade-one{
+    background: #263238!important;
+}
+.dark-shade-two{
+    background: #455a64!important;
+}
+.dark-shade-three{
+    background: #37424b!important;
+}
+.text-white{
+    color: white;
+}
+.btn-shadow {
+    box-shadow: rgba(0, 0, 0, 0.57) 0 15px 38px -10px;
+}
+.btn-rounded {
+    border-radius: 2.3rem;
+}
+.margin-less{
+    margin: 0;
+}
+.kit-outline{
+    border: 1px solid royalblue!important;
+}
+.background-trans{
+    background: transparent!important;
+}
+.background-info{
+    background: #4169e1!important;
+}
+.background-danger{
+    background: #ff0042 !important;
+}
+.background-warning{
+    background: #ffba44 !important;
+}
+.background-success{
+    background: #1db82c !important;
+}
+.background-rose{
+    background: #ff7f00 !important;
+}
+.background-mayan{
+    background: #c000ff !important;
+}
+.background-white{
+    background: white!important;
+}
+.border-info{
+    border-color: #4169e1!important;
+}
+.border-danger{
+    border-color: #ff0042!important;
+}
+.border-warning{
+    border-color: #ffba44!important;
+}
+.border-success{
+    border-color: #1db82c!important;
+}
+.border-rose{
+    border-color: #ff7f00!important;
+}
+.border-mayan{
+    border-color: #c000ff!important;
+}
+.border-white{
+    border-color: #fff!important;
+}
+.kit-circle{
+    border-radius: 50%;
+}
+.kit-rounded{
+    border-radius: 0.48rem;
+}
+.kit-rounded-1{
+    border-radius: 1rem;
+}
+.kit-social{
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+}
+.kit-social-sm{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    transition: bacground 0.3s ease, border-color .3s ease;
+}
+.kit-social-sm:hover{
+    background: royalblue;
+    border-color: transparent!important;
+}
+.kit-search-form{
+    width: 100%;
+    display: flex;
+}
+.kit-search-input{
+    width: 80%;
+    border: none;
+    background: transparent;
+    height: 2.4rem;
+    flex-shrink: 1;
+}
+.kit-search-input:focus{
+    outline: none;
+    border-color: green!important;
+}
+.kit-search-submit{
+    width: 20%;
+    border: none;
+    background: transparent;
+    height: 2.4rem;
+    color: white;
+    transition: color 0.2s ease, background 0.3s ease;
+}
+.kit-search-submit:hover{
+    color: #e8e6ff;
+    background: #ff009a!important;
+}
+.kit-link{
+    text-decoration: none;
+}
+.kit-link:hover{
+    text-decoration: none;
+}
+.link-chip{
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    background: #4b5257;
+    transition: background 0.3s ease-in-out, border-color 0.3s ease;
+    line-height: 1;
+    margin: 5px 2px;
+}
+.link-chip:hover{
+    background: royalblue!important;
+    border-color: transparent!important;
+}
+.ui-links-h li{
+    margin-bottom: 0.2rem;
+}
+.ui-links-h li a{
+    text-decoration: none;
+    color: #979797;
+    font-size: 0.9rem;
+    padding-right: 1rem;
+    transition: color 0.2s ease;
+}
+.ui-links-h li a:hover{
+    color: royalblue;!important;
+}
+
+
+
+/*******************************MATERIAL INPUT*****************************/
+/* form starting stylings ------------------------------- */
+.material-group 			  {
+    position:relative;
+    width: 98%;
+    margin: 0 1% 45px 1%;
+}
+.material-input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #d3d3d3;
+    background: transparent;
+    width: 100%;
+}
+.material-input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+.material-label 				 {
+    color:#d3d3d3;
+    font-size:15px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.material-input:focus ~ .material-label, .material-input:valid ~ .material-label 		{
+    top:-20px;
+    font-size:11px;
+    color: rgba(23, 157, 226, 0.96);
+}
+
+/* BOTTOM BARS ================================= */
+.material-bar 	{ position:relative; display:block; width:100%; }
+.material-bar:before, .material-bar:after 	{
+    content:'';
+    height:1px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:rgba(23, 157, 226, 0.96);
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.material-bar:before {
+    left:50%;
+}
+.material-bar:after {
+    right:50%;
+}
+
+/* active state */
+.material-input:focus ~ .material-bar:before, .material-input:focus ~ .material-bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.material-highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+.material-input:focus ~ .material-highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:rgba(23, 157, 226, 0.96); }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:rgba(23, 157, 226, 0.96); }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:rgba(23, 157, 226, 0.96); }
+    to 	{ width:0; background:transparent; }
+}
+/*******************************END MATERIAL INPUT*****************************/
