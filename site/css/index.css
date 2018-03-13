@@ -1,0 +1,469 @@
+/**
+ * Created by Jose Kim on 6/29/2017.
+ */
+@media (max-width: 25em) {
+  .pop {
+    width: 10%; } }
+
+.h-l {
+  width: 100%;
+  min-height: 550px;
+  position: relative; }
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 50% 75%; }
+  75% {
+    background-position: 50% 50%; }
+  100% {
+    background-position: 100% 100%; } }
+.h-l:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  will-change: animation;
+  background: url("../img/business.jpg") repeat-x;
+  background-position: 10%;
+  animation: animatedBackground 5.5s linear alternate infinite; }
+
+.h-l-h {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/business2.jpg") center;
+  background-size: cover;
+  transition: opacity 3s ease; }
+
+.h-l:hover .h-l-h {
+  opacity: 0; }
+
+.h-l-c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff3a00, rgba(0, 0, 0, 0.5));
+  display: flex;
+  flex-direction: column; }
+  .h-l-c .land-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 70%;
+    margin: 0 10% 5% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 47.5em) {
+      .h-l-c .land-slider {
+        width: 96%;
+        margin: 0 2% 1% 2%; } }
+    .h-l-c .land-slider .h-l-item {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .h-l-c .land-slider .h-l-item .tito {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 4rem;
+        font-weight: 100;
+        color: white;
+        text-align: center; }
+        @media (max-width: 47.5em) {
+          .h-l-c .land-slider .h-l-item .tito {
+            font-size: 2rem; } }
+      .h-l-c .land-slider .h-l-item .t-p {
+        width: 70%;
+        margin: 0 auto;
+        color: #d6d6d6;
+        text-align: center; }
+        @media (max-width: 47.5em) {
+          .h-l-c .land-slider .h-l-item .t-p {
+            width: 96%; } }
+
+.navg {
+  width: 100%;
+  height: 12%;
+  padding: 0.8rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .navg .logo h3 {
+    font-family: 'Niconne', cursive;
+    font-size: 2.5rem; }
+    .navg .logo h3 span {
+      font-size: 2.7rem !important;
+      font-family: 'Niconne', cursive; }
+  .navg .navg-menu {
+    margin: 0; }
+    .navg .navg-menu li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      display: inline-block;
+      padding-right: 1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+      font-size: 0.87rem;
+      font-family: 'Abel', sans-serif;
+      font-weight: 600; }
+      .navg .navg-menu li a:hover {
+        color: #0052ff;
+        transform: scale(1.2); }
+    @media (max-width: 47.5em) {
+      .navg .navg-menu {
+        display: none; } }
+  .navg .nav-tog {
+    display: none; }
+    @media (max-width: 47.5em) {
+      .navg .nav-tog {
+        display: block; } }
+
+.clients {
+  width: 92%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  background: white;
+  transform: translateY(-30px);
+  box-shadow: 0 3px 15px -3px grey; }
+
+.land-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  .land-grid .land-grid-item {
+    flex-basis: 50%; }
+    .land-grid .land-grid-item .grid-img {
+      width: 100%;
+      position: relative;
+      overflow: hidden; }
+      .land-grid .land-grid-item .grid-img img {
+        width: 100%;
+        transition: transform 0.9s ease; }
+      .land-grid .land-grid-item .grid-img:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); }
+      .land-grid .land-grid-item .grid-img:hover img {
+        transform: scale(1.2); }
+    .land-grid .land-grid-item .grid-desc {
+      width: 100%;
+      height: 100%;
+      padding: 3rem 4rem;
+      background: white; }
+      .land-grid .land-grid-item .grid-desc .desc-tito {
+        font-weight: 100;
+        color: #607d8b;
+        font-size: 2.4rem; }
+      .land-grid .land-grid-item .grid-desc .desc-p {
+        font-size: 0.94rem; }
+      .land-grid .land-grid-item .grid-desc .desc-link {
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 3px solid #2dca52;
+        color: #2dca52;
+        font-size: 0.8rem;
+        transition: color 0.3s ease; }
+        .land-grid .land-grid-item .grid-desc .desc-link:hover {
+          color: #ff0061; }
+
+/*********************************************************FOOTER********************/
+.pres-footer {
+  width: 100%;
+  min-height: 350px;
+  background: #101b25;
+  padding: 5rem 10rem 0 10rem;
+  position: relative; }
+
+.pres-footer p {
+  color: #616a73;
+  font-size: 0.8rem; }
+
+.pres-footer-title {
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.90rem;
+  font-weight: 200; }
+
+.pres-footer ul li a {
+  display: inline-block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #616a73;
+  transition: color 0.3s ease; }
+
+.pres-footer ul li a:hover {
+  color: royalblue; }
+
+.pres-footer-h {
+  font-family: 'Kaushan Script', cursive;
+  color: white; }
+
+@media (max-width: 500px) {
+  .pres-footer {
+    padding: 5rem 4rem 0 4rem; } }
+.back-top {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: royalblue;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.back-top a {
+  text-decoration: none; }
+
+.back-top a i {
+  transition: color 0.2s ease; }
+
+.back-top:hover a i {
+  color: #ff0072 !important; }
+
+/*********************************************************END FOOTER********************/
+/*********************************************************LOGIN/REGISTER********************/
+.sign-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to bottom, royalblue, rgba(255, 3, 180, 0.68)), url("../img/login.jpg") top; }
+  .sign-wrapper .l-box {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 50%;
+    height: 75%;
+    background: white;
+    border-radius: 8px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .sign-wrapper .l-box .sign-title {
+      color: #607d8b;
+      font-weight: 100;
+      margin-top: 1rem; }
+    .sign-wrapper .l-box form {
+      width: 50%; }
+    @media (max-width: 47.5em) {
+      .sign-wrapper .l-box {
+        width: 80%; }
+        .sign-wrapper .l-box form {
+          width: 80%; } }
+    @media (max-width: 25em) {
+      .sign-wrapper .l-box {
+        width: 92%;
+        left: 4%; }
+        .sign-wrapper .l-box form {
+          width: auto; } }
+
+/*********************************************************END LOGIN/REGISTER********************/
+/*********************************************************Contact page********************/
+.contact-banner {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(255, 0, 61, 0.81)), url("../img/contact.jpg") bottom; }
+  @media (max-width: 47.5em) {
+    .contact-banner {
+      margin-bottom: 250px; } }
+  .contact-banner .contact-box {
+    position: absolute;
+    width: 70%;
+    margin: 0 15%;
+    height: 75%;
+    left: 0;
+    bottom: -30%;
+    background: white;
+    box-shadow: 0 2px 15px -1px grey;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 999999999; }
+    @media (max-width: 47.5em) {
+      .contact-banner .contact-box {
+        height: 110%;
+        bottom: -70%;
+        width: 90%;
+        margin: 0 5%; } }
+    .contact-banner .contact-box .contact-fm {
+      width: 70%;
+      height: 100%;
+      padding: 1.5rem; }
+      @media (max-width: 47.5em) {
+        .contact-banner .contact-box .contact-fm {
+          width: 100%; } }
+      .contact-banner .contact-box .contact-fm .send-msg {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        .contact-banner .contact-box .contact-fm .send-msg strong {
+          font-weight: 600; }
+      .contact-banner .contact-box .contact-fm form {
+        padding-top: 2rem; }
+    .contact-banner .contact-box .contact-info {
+      width: 30%;
+      height: 100%;
+      background: #1e2332;
+      padding: 1.5rem; }
+      @media (max-width: 47.5em) {
+        .contact-banner .contact-box .contact-info {
+          width: 100%;
+          height: 70%; } }
+      .contact-banner .contact-box .contact-info strong {
+        color: white;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 3rem; }
+      .contact-banner .contact-box .contact-info span {
+        display: block;
+        margin-bottom: 1rem; }
+      .contact-banner .contact-box .contact-info ul li i {
+        width: 35px;
+        height: 35px;
+        background: #a9a9a9;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: black; }
+  .contact-banner .in-touch {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    margin-left: 15%;
+    width: 70%; }
+
+.contact-map {
+  width: 100%;
+  height: 500px;
+  background: royalblue; }
+
+/*********************************************************END contact page********************/
+/*********************************************************about page********************/
+.about-banner {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent), url("../img/about.jpg") bottom; }
+  .about-banner .we-are {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    width: 70%;
+    height: 50%; }
+    .about-banner .we-are h1 {
+      font-weight: 100;
+      color: white; }
+    .about-banner .we-are p {
+      color: #bababa; }
+    .about-banner .we-are a {
+      border-radius: 0; }
+
+.our-story {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 1px 9px -1px grey;
+  transform: translateY(-90px);
+  padding: 2rem; }
+  .our-story h2 {
+    color: #465b66;
+    font-weight: 400;
+    text-shadow: 1px 2px 5px grey; }
+  .our-story p {
+    font-size: 0.92rem; }
+    .our-story p a {
+      border-radius: 0;
+      margin-top: 10px; }
+
+.our-work {
+  width: 100%;
+  padding: 1rem 0 3rem 0;
+  background: #f8f8f8; }
+  .our-work h2 {
+    color: #799bac;
+    font-weight: 400;
+    text-shadow: 1px 2px 5px grey;
+    margin-bottom: 2rem; }
+  .our-work .our-work-item {
+    background: white; }
+    .our-work .our-work-item img {
+      width: 100%; }
+    .our-work .our-work-item .work-des {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .our-work .our-work-item .work-des h4 {
+        font-size: 1.2rem;
+        font-weight: 300; }
+      .our-work .our-work-item .work-des span {
+        font-size: 0.92rem; }
+
+.our-team {
+  width: 84%;
+  margin: 0 auto; }
+
+/*********************************************************END about page********************/
+/*********************************************************404********************/
+.f-404 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to left, rgba(255, 1, 33, 0.59), rgba(255, 2, 27, 0.94)), url("../img/4042.png");
+  background-size: cover; }
+  .f-404 .fof {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none; }
+    .f-404 .fof h1 {
+      color: white;
+      animation-duration: 3s;
+      font-family: 'Monda', sans-serif;
+      font-size: 13rem;
+      font-weight: 500;
+      text-shadow: 5px 4px 4px white; }
+      @media (max-width: 25em) {
+        .f-404 .fof h1 {
+          font-size: 8rem; } }
+    .f-404 .fof p {
+      color: white; }
+    .f-404 .fof span {
+      color: whitesmoke; }
+    .f-404 .fof a {
+      margin-top: 1rem;
+      border: 2px solid white;
+      color: white; }
+
+/*********************************************************end 404********************/
+
+/*# sourceMappingURL=index.css.map */

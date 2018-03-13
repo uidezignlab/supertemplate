@@ -1,0 +1,10 @@
+This library is built based on the excellent International Telephone Input, the authors of which deserve any credit you might like to give (though none of the blame)
+Flag images and CSS from Flag Sprites (which uses FamFamFam)
+Original country data from mledoze's World countries in JSON, CSV and XML
+This dataset is made available under the Open Database License:
+http://opendatacommons.org/licenses/odbl/1.0/
+
+Any rights in individual contents of the database are licensed under the Database Contents License:
+http://opendatacommons.org/licenses/dbcl/1.0/
+
+As stated on http://famfamfam.com/lab/icons/flags/: "These flag icons are available for free use for any purpose with no requirement for attribution."

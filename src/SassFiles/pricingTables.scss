@@ -1,0 +1,218 @@
+@import "mediaqueries";
+
+$trans-color: color 0.2s ease-in-out;
+$trans-shadow: box-shadow 0.3s ease-in-out;
+$trans-background: background 0.3s ease-in-out;
+$trans-border-color: border-color 0.3s ease-in-out;
+
+.pricing-table{
+  width: 96%;
+  //padding: 1rem;
+  border-radius: 0.4rem;
+  background: white;
+  //box-shadow: 0 2px 10px -1px grey;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2% 1rem 2%;
+  transition: $trans-shadow, transform 0.3s ease;
+  &:hover{
+    box-shadow: 0 5px 17px -1px grey;
+    transform: translateY(-5px);
+  }
+  .ul {
+    margin: 1rem 0;
+    padding: 1rem;
+    .li{
+    margin-bottom: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .p-top{
+        width: 100%;
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, royalblue, rgba(0,0,0,0));
+      }
+      .btn{
+        width: 96%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .p-symbol{
+    font-size: 0.9rem;
+    vertical-align: super;
+  }
+  .per-time{
+    font-size: 0.7rem;
+    color: #777;
+  }
+  .p-horizontal{
+    width: 100%;
+    border: 1px solid #bcbcbc;
+    .p-horizontal-c{
+      width: 100%;
+      ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        padding: 0.8rem;
+        transition: $trans-background;
+        &:hover{
+          background: rgba(0,0,0,0.08);
+        }
+        li{
+          width: calc(100% / 6);
+          strong{
+            font-size: 0.75rem;
+          }
+          @include mq($tablet, max){
+            width: 100%;
+            text-align: center;
+          }
+        }
+        @include mq($tablet, max){
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .p-panel{
+    width: 100%;
+    min-height: 4rem;
+    background: linear-gradient(to right, rgba(19, 183, 79, 0.84), #13b74f, #3be861);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .p-free{
+    width: 100%;
+    padding: 4rem 1rem;
+    border-radius: 0.3rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 107, 190, 0.8)), url('../img/city2.jpg');
+    p{
+      font-size: 0.9rem;
+      color: rgba(207, 207, 207, 0.88);
+      .btn{
+        @include mq($mobile, max){
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .p-ring{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: {
+      top: 2px solid green;
+      bottom: 2px solid red;
+      left: 2px solid purple;
+      right: 2px solid royalblue;
+      radius: 50%;
+    }
+    transition: $trans-border-color;
+    &:hover{
+      border-color: #ff3300!important;
+    }
+  }
+  .p-t-top{
+    width: 100%;
+    border-radius: 0.4rem 0.4rem 0 0;
+    min-height: 170px;
+    background: linear-gradient(to bottom, rgba(255, 0, 130, 0.65), rgba(255, 0, 71, 0.77)), url("../img/pTable.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq($tv){
+    width: 90%;
+    margin:{
+      left: 5%;
+      right: 5%;
+    }
+  }
+}
+
+.p-s-title{
+  color: #333;
+  font:{
+    family: 'Open Sans Condensed', sans-serif;
+    weight: 100;
+    size: 2.7rem;
+  }
+}
+
+.price-switch{
+  width: 250px;
+  border: 1px solid #c6c6c6;
+  display: flex;
+  padding: 1px;
+  .price-sw-btn{
+    width: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.8rem;
+    color: #607d8b;
+    transition: $trans-color, $trans-background;
+    &:hover{
+      text-decoration: none;
+      color: royalblue;
+    }
+  }
+}
+.p-p-para{
+  color: #555;
+  font:{
+    //family: 'Open Sans Condensed', sans-serif;
+    size: 0.9rem;
+  }
+}
+.pricing-faq{
+  width: 100%;
+  padding: 1rem 3rem;
+  box-shadow: 0 4px 10px -1px grey;
+  border-top: 1px solid #dcdcdc;
+  .p-s-title{
+    font-size: 1.8rem;
+  }
+  .card{
+    margin-bottom: 1rem;
+    border: 1px solid #cecece;
+    .card-header{
+      border: none;
+      background: rgba(197, 197, 197, 0.4);
+      transition: $trans-background;
+      &:hover{
+        background: #ff0681;
+        a{
+          color: #f1f1f1;
+        }
+      }
+      a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #4b5257;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.p-price{
+  font-size: 2.4rem;
+}

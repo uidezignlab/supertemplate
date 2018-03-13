@@ -1,0 +1,175 @@
+/**
+ * Created by Jose Kim on 6/22/2017.
+ */
+@import "mediaqueries";
+.video-grid{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .video-grid-item{
+    width: 49%;
+    margin-bottom: 1rem;
+    .video-poster{
+      width: 100%;
+      position: relative;
+      img{
+        width: 100%;
+      }
+      .video-play-button{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        transition: background 0.3s ease;
+        .v-play-b{
+          text-decoration: none;
+          display: inline-block;
+          margin: 0.5rem 1rem;
+          i{
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+            &:hover{
+              color: #ff0062!important;
+              transform: scale(1.2);
+            }
+          }
+        }
+        .v-state{
+          padding: 3px 10px;
+          background: royalblue;
+          margin: 0;
+          border-radius: 45% 0 45% 0;
+        }
+        &:hover{
+          background: rgba(0,0,0,0.7);
+        }
+      }
+    }
+    .video-desc{
+      width: 100%;
+      padding: 1rem 0;
+      .video-title{
+        font-family: Spectral,'Open Sans Condensed', sans-serif;
+        color: #666666;
+      }
+      .video-o-r-a{
+        margin-bottom: 0;
+        small{
+          font-size: 0.8rem;
+        }
+      }
+      .video-summary{
+        color: #222222;
+        font-size: 0.95rem;
+      }
+    }
+    @include mq($tablet, max){
+      width: 100%;
+    }
+  }
+}
+.v-pane-tt{
+  font-family: Niconne, "Open Sans Condensed", sans-serif;
+  display: inline-block;
+  border-bottom: 4px solid red;
+  margin-bottom: 1rem;
+}
+
+.trending{
+  width: 100%;
+  background: rgba(251, 250, 206, 0.73);
+  box-shadow: 0 2px 15px -4px grey;
+  .trending-poster{
+    width: 100%;
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .play-ico{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .play-ico-btn{
+        text-decoration: none;
+        width: 52px;
+        height: 50px;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+        &:hover i{
+          color: #ff004b!important;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .trending-con{
+    width: 100%;
+    padding: 1rem 0 0 0;
+    .tr-n-c{
+      padding: 0 1rem;
+      .trending-name{
+        font-family: "Open Sans Condensed",sans-serif;
+        margin-bottom: 0;
+      }
+      .v-pop{
+        border-bottom: 4px solid #ff0050;
+      }
+      small{
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+      }
+    }
+    .popular-v{
+      width: 100%;
+      border-top: 1px solid #efefef;
+      li{
+        width: 100%;
+        padding: 0 1rem;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: {
+         bottom: 1px solid #efefef;
+        }
+        cursor: pointer;
+        small{
+          font-size: 0.85rem;
+          transition: color 0.3s ease;
+        }
+        &:hover small{
+          color: #ff045c;
+        }
+      }
+    }
+  }
+}
+
+.audio-con{
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 15px 1px grey;
+  audio{
+    width: 100%;
+    background: royalblue;
+  }
+}

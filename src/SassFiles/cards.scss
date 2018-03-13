@@ -1,0 +1,502 @@
+
+@import "mediaqueries";
+
+$trans-color: color 0.2s ease-in-out;
+$trans-shadow: box-shadow 0.3s ease-in-out;
+$trans-background: background 0.3s ease-in-out;
+$trans-border-color: border-color 0.3s ease-in-out;
+$trans-height: height 0.3s ease-in-out;
+
+.override-w-h{
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.kit-card{
+  width: 100%;
+  background: white;
+  //box-shadow: 0 2px 5px 1px #a3a3a3;
+  border-radius: 6/$doc‐font‐size + em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card-regular{
+  @extend .kit-card;
+  min-height: 350px;
+  .card-image{
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    overflow: hidden;
+    img{
+      width: 100%;
+      border-radius: inherit;
+      transition: transform 0.3s ease-in-out;
+    }
+    .card-img-hover{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background: rgba(0,0,0,0.7);
+      overflow: hidden;
+      border-radius: 6px 6px 0 0;
+      transition: $trans-height, width 0.3s ease-in-out;
+      .card-im-action{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        i{
+          cursor: pointer;
+          transition: $trans-color;
+          &:hover{
+            color: royalblue!important;
+          }
+        }
+      }
+      .card-img-name{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Droid Serif', serif;
+      }
+    }
+  }
+  &:hover .card-img-hover{
+    height: 100%;
+    width: 100%;
+  }
+  &:hover .card-image img{
+    transform: scale(1.2);
+  }
+  .card-content{
+    width: 100%;
+    padding: 1rem 1rem 0.7rem 1rem;
+    .card-content-p{
+      font:{
+        size: 0.95rem;
+      }
+      color: #607d8b;
+    }
+    .card-content-action{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      span{
+        font-size: 0.85rem;
+        transition: $trans-color;
+        cursor: pointer;
+        &:hover{
+          color: #ff0091;
+        }
+        }
+    }
+  }
+  .card-content-t{
+    font:{
+      family: "Open Sans Condensed", sans-serif;
+      weight: 600;
+    }
+    text-transform: uppercase;
+    color: #555555;
+    letter-spacing: 1.2px;
+  }
+}
+
+.blog-card{
+  @extend .kit-card;
+  .blog-card-horizontal{
+
+  }
+  .blog-card-vertical{
+    .img-cont{
+      width: 100%;
+      position: relative;
+      border-radius: 6px 6px 0 0;
+      img{
+        width: 100%;
+        border-radius: 6px 6px 0 0;
+      }
+      .sc{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        background: rgba(0,0,0,0.7);
+        border-radius: 6px 6px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: $trans-height;
+        i{
+          padding-right: 1rem;
+          cursor: pointer;
+        }
+      }
+      &:hover .sc{
+        height: 18%;
+      }
+      .sharee{
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 30%;
+        height: 77%;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        i{
+          display: inline-block;
+          margin-top: 1rem;
+          font-size: 1.3rem;
+          cursor: pointer;
+          transition: $trans-color;
+          &:hover{
+            color: #ff0071!important;
+          }
+        }
+      }
+    }
+  }
+  .blog-card-content{
+    width: 100%;
+    padding: 1rem;
+    .bl-nm{
+      font-family: 'Droid Serif', serif;
+    }
+    .bl-desc{
+      color: #607d8b;
+    }
+    .blog-card-con-act{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      @include mq($mobile, max){
+        flex-direction: column;
+        align-items: center;
+        &>div{
+          margin-bottom: 0.7rem;
+        }
+      }
+      &>div{
+        display: flex;
+        img{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        span{
+          font-size: 0.8rem;
+          padding-right: 0.4rem;
+          i{
+            padding-right: 0.5rem;
+            color: #555;
+            cursor: pointer;
+            transition: $trans-color;
+            &:hover{
+              color: #ff006d!important;
+            }
+          }
+        }
+        &>i{
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          margin-left: 0.4rem;
+          display: inline-block;
+          line-height: 2.3;
+        }
+      }
+    }
+  }
+}
+
+.log-reg-card{
+  @extend .kit-card;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(255, 0, 121), rgba(0,0,0,0)), url(../img/card13.jpg) no-repeat right;
+  box-shadow: 0 5px 25px -1px grey;
+  border-radius: 6px;
+  .log-reg-box{
+    width: 100%;
+    background: white;
+    padding: 50/$doc‐font‐size + em 15%;
+    border-radius: 6px 0 0 6px;
+    @include mq($mobile, max){
+      padding: 50/$doc‐font‐size + em 4%;
+      border-radius: 6px;
+    }
+    .s-in{
+      font-family: 'Droid Serif', serif;
+      @include mq($mobile, max){
+        font-size: 1.3rem;
+      }
+    }
+    form{
+      @include mq($mobile, max){
+        input[type="submit"]{
+          font-size: 0.6rem;
+        }
+      }
+      i{
+        transition: $trans-color;
+        cursor: pointer;
+        &:hover{
+          color: #e10e7d!important;
+        }
+      }
+    }
+  }
+  .log-reg-card-con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mq($mobile, max){
+      display: none;
+    }
+  }
+  .cr-title{
+    font-family: 'Berkshire Swash', cursive;
+  }
+  .login-fm-2-sc{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 25px;
+    border-radius: 0.4rem;
+    margin-top: 3rem;
+    box-shadow: -3px 2px 15px -1px grey;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .login-fm-2-sc:hover{
+    box-shadow: -3px 4px 15px -1px grey;
+  }
+  .login-fm-2-sc i{
+    font-size: 1.1rem;
+    display: inline-block;
+    padding-right: 2rem;
+  }
+  .login-fm-2-sc span{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  .tt-radius{
+    border-radius: 6px;
+  }
+  p{
+    font-size: 0.9rem;
+  }
+}
+.cr-title{
+  font-family: 'Berkshire Swash', cursive;
+}
+.log-reg-card-2{
+  @extend .kit-card;
+  width: 100%;
+  border-radius: 6px;
+  background: white;
+  padding: 3rem;
+  @include mq($mobile, max){
+    padding: 2rem 0.5rem;
+    form input[type="submit"]{
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.profile-card{
+  @extend .kit-card;
+  width: 100%;
+  background: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .price-avail{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .avail{
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 1rem;
+      background: #01ff77;
+      font-size: 0.86rem;
+      color: white;
+      cursor: pointer;
+      transition: $trans-background;
+      &:hover{
+        background: #ff0075!important;
+      }
+    }
+    .price-avail{
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+  .prof-img{
+    width: 100 / $doc‐font‐size + em;
+    height: 100 / $doc‐font‐size + em;
+    border-radius: 50%;
+    border:{
+      top: 3px solid green;
+      bottom: 3px solid red;
+      left: 3px solid royalblue;
+      right: 3px solid purple;
+    }
+    position: relative;
+    &>div{
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    img{
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    &:hover{
+      border-color: #ff027b;
+      img{
+        transform: scale(1.2);
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 35%;
+      width: 0;
+      height: 0;
+      border:{
+        top: 15px solid red;
+        left: 15px solid transparent;
+        right: 15px solid transparent;
+      }
+    }
+  }
+  .prof-card-name{
+    font-weight: 700;
+    color: #333333;
+    font-size: 1.05rem;
+    margin-top: 1.2rem;
+  }
+  .prof-card-job{
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+  }
+  .prof-card-job2{
+    font-size: 0.75rem;
+    color: #00ca20;
+    margin-top: 0.2rem;
+  }
+  .prof-skills{
+    margin-top: 0.2rem;
+    span{
+      cursor: pointer;
+      border: 1px solid lightgrey;
+      transition: $trans-color;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  p{
+    width: 100%;
+    font-size: 0.76rem;
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+}
+
+.product-card-sm{
+  @extend .kit-card;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  .prod-img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0 ;
+    position: relative;
+    &:hover .prod-img-hover{
+      opacity: 1;
+    }
+    img{
+      width: 100%;
+    }
+    .prod-img-hover{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      border-radius: 8px 8px 0 0 ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      span i{
+        cursor: pointer;
+        transition: $trans-color;
+        &:hover{
+          color: #ff016b!important;
+        }
+      }
+    }
+  }
+
+  .prod-card-content{
+    width: 100%;
+    padding: 1rem;
+    .price-cart{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      @include mq($mobile, max){
+        flex-direction: column;
+        align-items: center;
+      }
+      span{
+        cursor: pointer;
+        i{
+          transition: $trans-color;
+        }
+        &:hover i{
+          color: #ff0685!important;
+        }
+        small{
+          font-size: 0.9rem;
+        }
+      }
+    }
+    strong{
+      color: #444444;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    p{
+      span{
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

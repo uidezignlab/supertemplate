@@ -1,0 +1,20 @@
+//This is the main scss file that compiles to main.min.css in ../css folder
+
+
+@import "bourbon/bourbon";
+@import "mediaqueries";
+@import "blogComponents";
+@import "cards";
+@import "header";
+@import "miscellaneous";
+@import "photoGallery";
+@import "pricingTables";
+@import "services";
+@import "team";
+@import "testimonials";
+@import "timeline";
+@import "videoAudio";
+@import "../css/common.css";
+@import "../css/navigation.css";
+@import "../css/footer.css";
+@import "../css/shop.css";

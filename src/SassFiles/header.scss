@@ -1,0 +1,119 @@
+@import "mediaqueries";
+.header-container{
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 70px 0;
+}
+.header-container-c{
+  width: 96%;
+  margin: 0 auto;
+}
+.kit-header{
+  width: 100%;
+  min-height: 600px;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.4rem;
+  .logo{
+    font:{
+      size: 1.5rem;
+      family: 'Pacifico', cursive;
+    }
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover{
+      color: #06b028!important;
+    }
+  }
+
+  .ui-links-h li a{
+    padding-right: 1.2rem;
+    font-size: 0.8rem;
+    color: #c0c0c0;
+    transition: color 0.3s ease;
+    &:hover{
+      text-decoration: none;
+      color: royalblue;
+    }
+  }
+  .search-ico{
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    &:hover{
+      color: #ff006b!important;
+    }
+  }
+  .kit-title{
+    font-family: 'Abel', sans-serif;
+  }
+  .kit-title-2{
+    font-family: 'Passion One', cursive;
+    font-size: 4rem;
+    @include mq($mobile, max){
+      font-size: 2rem;
+    }
+  }
+  .kit-para{
+    font-family: Roboto, sans-serif;
+    color: #ebebeb;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    @include mq($mobile, max){
+      padding: 0 0.1rem;
+    }
+  }
+  .kit-header-content{
+    padding: 0 1.9rem;
+    @include mq($mobile, max){
+      padding: 0 0.1rem;
+    }
+  }
+  @include mq($mobile, max){
+    padding: 0.8rem;
+    .btn{
+      font-size: 0.7rem;
+    }
+    .kit-search-submit{
+      font-size: 0.7rem;
+    }
+  }
+}
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+/*************************header one*************************/
+.header-one{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.22), rgb(162, 3, 186)), url('../img/air.jpg') repeat-x 0 bottom;
+  animation: animatedBackground 10s linear infinite alternate;
+}
+/*************************end header one*************************/
+/*************************header two*************************/
+.header-two{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.22), rgb(162, 3, 186)), url('../img/earth.jpg') center;
+  background-size: cover;
+}
+/*************************end header two*************************/
+/*************************header three*************************/
+.header-three{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.22), rgb(162, 3, 186)), url('../img/family.jpg') repeat-x center;
+}
+/*************************end header three*************************/
+/*************************header four*************************/
+.header-four{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.68), rgba(80, 8, 186, 0.59)), url('../img/forest.jpg') repeat-x center;
+}
+/*************************end header four*************************/
+/*************************header five*************************/
+.header-five{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.68), rgba(255, 0, 68, 0.75)), url('../img/kid.jpg') bottom left;
+  background-size: cover;
+}
+/*************************end header five*************************/
+/*************************header six*************************/
+.header-six{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.68), rgba(255, 0, 68, 0.62)), url('../img/star.jpg') bottom;
+  background-size: cover;
+}
+/*************************end header six*************************/
